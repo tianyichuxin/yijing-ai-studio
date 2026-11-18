@@ -57,7 +57,7 @@ You can also skip ComfyUI entirely and run everything through cloud vendors; bot
 ## FAQ
 
 **Do I need an NVIDIA GPU?**
-For local image / video generation, yes — 12 GB VRAM minimum, 24 GB recommended. If everything runs through cloud vendors, the GPU only needs to drive the UI.
+For local image / video generation, yes — 12 GB VRAM minimum (a practical floor; local models nearly fill it, and 16 GB is more comfortable for daily use). If everything runs through cloud vendors, integrated graphics is enough — the app itself uses almost no VRAM.
 
 **Does it require internet access?**
 Cloud models do. With local ComfyUI, generation can run fully offline. License activation is offline too: no account, and your work is never uploaded.
@@ -67,15 +67,16 @@ Every generation capability, enough to complete one full episode with all shots;
 
 ## System Requirements
 
-| Item    | Minimum                                                       | Recommended                 |
-| ------- | ------------------------------------------------------------- | --------------------------- |
-| CPU     | 12 cores (64-bit)                                             | 16+ cores                   |
-| Memory  | 32 GB                                                         | 64 GB                       |
-| Display | 1920×1080                                                     | 4K; system scaling 100–150% |
-| GPU     | 12 GB VRAM (NVIDIA, local image / video generation)           | 24 GB VRAM (RTX 4090 class) |
-| Disk    | 100 GB free space                                             | 500 GB+ SSD                 |
-| OS      | Windows 10 / macOS 12                                         | Windows 11 / macOS 15       |
-| Network | Internet access required for the model services you configure | —                           |
+| Item                | Minimum                                                   | Recommended                 | Professional        |
+| ------------------- | --------------------------------------------------------- | --------------------------- | ------------------- |
+| CPU                 | 12 cores (64-bit)                                         | 16+ cores                   | 24+ cores           |
+| Memory              | 16 GB                                                     | 32 GB                       | 64 GB               |
+| Display             | 1920×1080                                                 | 4K; system scaling 100–150% | Dual 4K             |
+| VRAM (cloud models) | Not required (integrated graphics is enough)              | —                           | —                   |
+| VRAM (local gen)    | 12 GB (practical floor; local models nearly fill it)      | 16 GB                       | 24 GB               |
+| Disk                | 100 GB free space                                         | 500 GB+ SSD                 | 1 TB+ NVMe          |
+| OS                  | Windows 10 / macOS 12                                     | Windows 11 / macOS 15       | Same as recommended |
+| Network             | Internet access required for the model services you configure | —                       | —                   |
 
 Platforms: Windows 10 / 11 (64-bit) `Setup.exe`; macOS 12+ (Apple Silicon) `DMG`; Linux Ubuntu 20.04+ (x64) `deb`. No rpm, AppImage, mobile or web builds.
 
